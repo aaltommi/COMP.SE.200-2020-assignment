@@ -1,5 +1,12 @@
 # Student template
 
+## Introductions
+
+`npm install`
+
+`npm test`
+
+
 ## Purpose of this repository
 
 This is a project template for students participating in Software Testing course

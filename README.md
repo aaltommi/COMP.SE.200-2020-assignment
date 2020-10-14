@@ -2,9 +2,19 @@
 
 ## Introductions
 
+Nodejs 12.11 => required.
+
+Navigate to root directory.
+
+Install required packages:
 `npm install`
 
+Run tests:
 `npm test`
+
+Test runner is mocha. It searches all file with test.js extension and runs tests in them. Check example on add.test.js for how to develop test for each function in the library.
+
+
 
 
 ## Purpose of this repository

@@ -1,3 +1,14 @@
+import add from '../src/add.js';
+import assert from 'assert';
+describe('Test add.js', function () {
+    it('Should return sum of two two numbers', function () {
+        assert.strictEqual(add(4,6), 10);
+    });
+    it('Test faulty input', function () {
+        assert.strictEqual(add('six','four'), 'ten');
+    });
+});
+
 
 /* import createMathOperation from './.internal/createMathOperation.js'
 
@@ -18,13 +29,3 @@ const add = createMathOperation((augend, addend) => augend + addend, 0)
 
 export default add */
 
-import add from '../src/add.js';
-import assert from 'assert';
-describe('Test add.js', function () {
-    it('Should return sum of two two numbers', function () {
-      assert.strictEqual(add(4,6), 10);
-    });
-    it('Test faulty input', function () {
-        assert.strictEqual(add('six','four'), 'ten');
-    });
-});

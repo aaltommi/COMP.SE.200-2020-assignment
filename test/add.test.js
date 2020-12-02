@@ -1,3 +1,4 @@
+//const add = require('../src/add.js');
 import add from '../src/add.js';
 import assert from 'assert';
 describe('Test add.js', function () {

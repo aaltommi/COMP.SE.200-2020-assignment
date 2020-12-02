@@ -1,7 +1,8 @@
 language: node_js
 node_js:
-  - 12
+  - node
 install:
   - npm install 
 script:
-  - npm test
+  - npm run testc
+after_success: npm run coveralls

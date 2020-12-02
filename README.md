@@ -1,5 +1,7 @@
 # Student template
 
+[![Coverage Status](https://coveralls.io/repos/github/aaltommi/COMP.SE.200-2020-assignment/badge.svg?branch=master)](https://coveralls.io/github/aaltommi/COMP.SE.200-2020-assignment?branch=master)
+
 ## Introductions
 
 Nodejs 12.11 => required.

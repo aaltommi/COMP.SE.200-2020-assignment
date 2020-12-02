@@ -2,10 +2,10 @@ import add from '../src/add.js';
 import assert from 'assert';
 describe('Test add.js', function () {
     it('Should return sum of two two numbers', function () {
-        assert.strictEqual(add(4,6), 10);
+        assert.equal(add(4,6), 10);
     });
     it('Test faulty input', function () {
-        assert.strictEqual(add('six','four'), 'ten');
+        assert.equal(add('six','four'), 'sixfour');
     });
 });
 

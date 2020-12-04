@@ -17,11 +17,12 @@
  * difference([2, 1], [2, 3])
  * // => [1]
 */
+import chai from 'chai';
 
 import difference from '../src/difference.js';
-import assert from 'assert';
+//import assert from 'assert';
 describe('Test difference.js', function () {
     it('Should return [1] with input [2, 1], [2, 3].', function () {
-        assert.equal(difference([2, 1], [2, 3]), [1]);
+      chai.expect(difference([2, 1], [2, 3])).deep.to.equal([1]);
     });
 });

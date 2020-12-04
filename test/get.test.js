@@ -34,6 +34,6 @@ describe('Test get.js', function () {
         assert.equal(get(object, ['a', '0', 'b', 'c']), 3);
     });
     it('Should return correct value with input "a.b.c" "default', function () {
-      assert.equal(get(object, 'a.b.c', 'default'), 'defaul');
+      assert.equal(get(object, 'a.b.c', 'default'), 'default');
     }); 
 });

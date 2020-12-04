@@ -22,13 +22,13 @@
  * console.log(castArray(array) === array)
  * // => true
  */
+import chai from 'chai';
 import castArray from '../src/castArray.js';
-import assert from 'assert';
 describe('Test castArray.js', function () {
     it('Should return correct array with input 1', function () {
-        assert.equal(castArray(1), [1]);
+        chai.expect(castArray(1)).deep.to.equal([1]);
     });
     it('Should return correct array with input { "a": 1 }', function () {
-        assert.equal(castArray({ 'a': 1 }), [{ 'a': 1 }]);
+        chai.expect(castArray({ 'a': 1 })).deep.to.equal([{ 'a': 1 }]);
     });
 });

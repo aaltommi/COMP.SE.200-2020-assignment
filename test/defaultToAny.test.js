@@ -22,7 +22,7 @@
  * defaultToAny(undefined, null, NaN)
  * // => NaN
  */
-
+import chai from 'chai';
 import defaultToAny from '../src/defaultToAny.js';
 import assert from 'assert';
 describe('Test defaultToAny.js', function () {
@@ -36,6 +36,6 @@ describe('Test defaultToAny.js', function () {
       assert.equal(defaultToAny(undefined, null, 20), 20);
     });
     it('Should return NaN which is first not nan or null or undefined', function () {
-      assert.equal(defaultToAny(undefined, null, NaN), NaN);
+      chai.expect(defaultToAny(undefined, null, NaN)).deep.to.equal(NaN);
     });
 });

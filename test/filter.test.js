@@ -22,15 +22,14 @@
  * // => objects for ['barney']
  */
 
-
+import chai from 'chai'
 import filter from '../src/filter.js';
-import assert from 'assert';
 describe('Test filter.js', function () {
   const users = [
     { 'user': 'barney', 'active': true },
     { 'user': 'fred',   'active': false }
   ]
     it('Should return correct array with input 1', function () {
-        assert.equal(filter(users, ({ active }) => active), ['barney']);
+        chai.expect(filter(users, ({ active }) => active)).deep.to.equal(['barney']);
     });
 });

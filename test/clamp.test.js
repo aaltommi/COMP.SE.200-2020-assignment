@@ -15,7 +15,7 @@
  * clamp(10, -5, 5)
  * // => 5
  */
-
+import chai from 'chai';
 import clamp from '../src/clamp.js';
 import assert from 'assert';
 describe('Test clamp.js', function () {
@@ -23,6 +23,6 @@ describe('Test clamp.js', function () {
         assert.equal(clamp(10, -5, 5), -5);
     });
     it('Should return positive', function () {
-        assert.equal(clamp(10, -5, 5), 5);
+        chai.expect(clamp(10, -5, 5)).deep.to.equal(5);
     });
 });

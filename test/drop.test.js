@@ -20,20 +20,20 @@
  * drop([1, 2, 3], 0)
  * // => [1, 2, 3]
  */
-
+import chai from 'chai';
 import drop from '../src/drop.js';
 import assert from 'assert';
 describe('Test drop.js', function () {
     it('Should drop first', function () {
-        assert.equal(drop([1, 2, 3]), [2,3]);
+      chai.expect(drop([1, 2, 3])).deep.to.equal([2,3]);
     });
     it('Should drop 2 first', function () {
-        assert.equal(drop([1, 2, 3], 2), [3]);
+      chai.expect(drop([1, 2, 3], 2)).deep.to.equal([3]);
     });
     it('Should should drop all', function () {
-      assert.equal(drop([1, 2, 3], 5), []);
+      chai.expect(drop([1, 2, 3], 5)).deep.to.equal([]);
     });
     it('Should drop none', function () {
-      assert.equal(drop([1, 2, 3], 0), [1,2,3]);
+      chai.expect(drop([1, 2, 3], 0)).deep.to.equal([1,2,3]);
     });
 });

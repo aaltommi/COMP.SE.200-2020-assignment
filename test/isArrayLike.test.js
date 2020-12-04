@@ -31,9 +31,10 @@ describe('Test isArrayLike.js', function () {
     it('Should return true with input [1, 2, 3]', function () {
         assert.equal(isArrayLike([1, 2, 3]), true);
     });
-    it('Should return true with input document.body.children', function () {
-        assert.equal(isArrayLike(document.body.children), true);
-    });
+    // Cannot test this as the document is not usable here
+    // it('Should return true with input document.body.children', function () {
+    //     assert.equal(isArrayLike(document.body.children), true);
+    // });
     it('Should return true with input string abc', function () {
       assert.equal(isArrayLike('abc'), true);
     }); 

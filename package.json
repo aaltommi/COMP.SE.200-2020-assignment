@@ -20,6 +20,8 @@
     "mocha-lcov-reporter": "^1.3.0"
   },
   "nyc": {
-    "include": ["src/*.js"]
+    "include": [
+      "src/*.js"
+    ]
   }
 }

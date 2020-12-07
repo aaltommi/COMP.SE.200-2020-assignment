@@ -21,7 +21,7 @@
  * // => { 'true': 2, 'false': 1 }
  */
 import countBy from '../src/countBy.js';
-import assert from 'assert';
+import chai from 'chai';
 describe('Test countBy.js', function () {
   const users = [
        { 'user': 'barney', 'active': true },
@@ -29,6 +29,6 @@ describe('Test countBy.js', function () {
        { 'user': 'fred', 'active': false }
     ]
     it('Should return correct object', function () {
-        assert.equal(countBy(users, value => value.active), { 'true': 2, 'false': 1 });
+      chai.expect(countBy(users, value => value.active)).to.equal({ 'true': 2, 'false': 1 });
     });
 });

@@ -13,9 +13,9 @@
  */
 
 import compact from '../src/compact.js';
-import assert from 'assert';
+import chai from 'chai';
 describe('Test compact.js', function () {
     it('Should return correct array with no falsey values', function () {
-        assert.equal(compact([0, 1, false, 2, '', 3]), [1,2,3]);
+      chai.expect(compact([0, 1, false, 2, '', 3])).to.equal([1,2,3]);
     });
 });

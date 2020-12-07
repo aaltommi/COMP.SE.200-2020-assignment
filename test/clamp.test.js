@@ -17,12 +17,11 @@
  */
 import chai from 'chai';
 import clamp from '../src/clamp.js';
-import assert from 'assert';
 describe('Test clamp.js', function () {
     it('Should return negative', function () {
-        assert.equal(clamp(10, -5, 5), -5);
+        chai.expect(clamp(10, -5, 5)).to.equal(-5);
     });
     it('Should return positive', function () {
-        chai.expect(clamp(10, -5, 5)).deep.to.equal(5);
+        chai.expect(clamp(10, -5, 5)).to.equal(5);
     });
 });

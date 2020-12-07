@@ -29,7 +29,11 @@ describe('Test filter.js', function () {
     { 'user': 'barney', 'active': true },
     { 'user': 'fred',   'active': false }
   ]
+  const returnvalue = [{
+    "user": "barney",
+    "active": true
+  }]
     it('Should return correct array with input 1', function () {
-        chai.expect(filter(users, ({ active }) => active)).deep.to.equal(['barney']);
+        chai.expect(filter(users, ({ active }) => active)).deep.to.equal(returnvalue);
     });
 });

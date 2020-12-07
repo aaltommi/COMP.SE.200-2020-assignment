@@ -31,23 +31,23 @@
 
 
 import eq from '../src/eq.js';
-import assert from 'assert';
+import chai from 'chai';
 describe('Test eq.js', function () {
   const object = { 'a': 1 }
   const other = { 'a': 1 }
     it('Should return true with same objects', function () {
-        assert.equal(eq(object, object), true);
+      chai.expect(eq(object, object)).to.equal(true);
     });
     it('Should return false with different objects', function () {
-        assert.equal(eq(object, other), false);
+      chai.expect(eq(object, other)).to.equal(false);
     });
     it('Should return true with same string', function () {
-      assert.equal(eq('a', 'a'), true);
+      chai.expect(eq('a', 'a')).to.equal(true);
     });
     it('Should return false with string and object', function () {
-      assert.equal(eq('a', Object('a')), false);
+      chai.expect(eq('a', Object('a'))).to.equal(false);
     });
     it('Should return true with two Nan', function () {
-      assert.equal(eq(NaN, NaN), true);
+      chai.expect(eq(NaN, NaN)).to.equal(true);
     });
 });
